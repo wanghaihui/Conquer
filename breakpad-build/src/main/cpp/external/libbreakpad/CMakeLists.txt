@@ -5,12 +5,12 @@ cmake_minimum_required(VERSION 3.4.1)
 set(BREAKPAD_ROOT ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Include Directories
-include_directories($(BREAKPAD_ROOT)/src $(BREAKPAD_ROOT)/src/common/android/include)
+include_directories(${BREAKPAD_ROOT}/src ${BREAKPAD_ROOT}/src/common/android/include)
 
 # file--File Operator Command--文件操作命令
 # GLOB--会产生一个由所有匹配globbing表达式的文件组成的列表，并将其保存到变量中
 file(GLOB BREAKPAD_SOURCES_COMMON
-${BREAKPAD_ROOT}/src/client/linux/crash_generation/crash_generation_client.cc
+        ${BREAKPAD_ROOT}/src/client/linux/crash_generation/crash_generation_client.cc
         ${BREAKPAD_ROOT}/src/client/linux/dump_writer_common/thread_info.cc
         ${BREAKPAD_ROOT}/src/client/linux/dump_writer_common/ucontext_reader.cc
         ${BREAKPAD_ROOT}/src/client/linux/handler/exception_handler.cc
