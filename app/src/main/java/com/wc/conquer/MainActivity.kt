@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
     private fun initExternalReportPath() {
         externalReportPath = File(Environment.getExternalStorageDirectory(), "crashDump")
         if (!externalReportPath!!.exists()) {
-            externalReportPath!!.mkdirs();
+            externalReportPath!!.mkdirs()
         }
     }
 
