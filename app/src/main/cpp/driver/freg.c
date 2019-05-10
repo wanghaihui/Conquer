@@ -15,6 +15,8 @@
 
 #include "freg.h"
 
+#define init_MUTEX(sem) sema_init(sem, 1)
+
 // 主设备号和从设备号
 static int freg_major = 0;
 static int freg_minor = 0;
@@ -196,7 +198,6 @@ static void freg_create_proc(void) {
     struct proc_dir_entry *entry;
     entry = create_proc_entry(FREG_DEVICE_PROC_NAME, 0, NULL);
     if (entry) {
-        entry->owner = THIS_MODULE;
         entry->read_proc = freg_proc_read;
         entry->write_proc = freg_proc_write;
     }

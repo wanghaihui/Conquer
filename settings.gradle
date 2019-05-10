@@ -1,1 +1,3 @@
-include ':app', ':breakpad-build'
+include ':app'
+include ':breakpad-build'
+// include ':gen-jni-libs'
