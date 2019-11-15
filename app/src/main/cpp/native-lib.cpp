@@ -2,6 +2,7 @@
 #include <string>
 #include <stdio.h>
 #include <android/log.h>
+#include <iostream>
 
 #define LOG_TAG "haihui"
 
@@ -38,5 +39,7 @@ Java_com_wc_conquer_MainActivity_crash(JNIEnv *env, jobject obj) {
     //crash();
     pointer();
 }
+
+
 
 

@@ -11,6 +11,10 @@ import com.wc.breakpad.BreakpadInit
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.File
 
+
+/**
+ * Android NDK:https://github.com/android/ndk-samples
+ */
 class MainActivity : AppCompatActivity() {
 
     private val writeExternalStorageRequestCode: Int = 100
@@ -66,7 +70,6 @@ class MainActivity : AppCompatActivity() {
     private external fun stringFromJNI(): String
 
     companion object {
-
         // Used to load the 'native-lib' library on application startup.
         init {
             System.loadLibrary("native-lib")
@@ -78,4 +81,6 @@ class MainActivity : AppCompatActivity() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         initExternalReportPath()
     }
+
+
 }
